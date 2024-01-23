@@ -1,0 +1,100 @@
+// media breakpiont
+$screen-365  : 365px
+$screen-420  : 420px
+$screen-520  : 520px
+$screen-675  : 675px
+$screen-767  : 767px
+$screen-860  : 860px
+$screen-991  : 991px
+$screen-992  : 992px
+$screen-1024 : 1024px
+$screen-1140 : 1140px
+$screen-1230 : 1230px
+$screen-1300 : 1300px
+$screen-1366 : 1366px
+$screen-1440 : 1440px
+$screen-1367 : 1367px
+@mixin respond-to($media)
+    @if $media == screen-365
+        @media only screen and (max-width: $screen-365) 
+            @content
+    @else if $media == screen-420
+        @media only screen and (max-width: $screen-420) 
+            @content
+    @else if $media == screen-520
+        @media (max-width: $screen-520)
+            @content
+    
+    @else if $media == screen-675
+        @media (max-width: $screen-675)
+            @content
+
+    @else if $media == screen-767
+        @media (max-width: $screen-767)
+            @content
+
+    @else if $media == phnLandscape
+        @media only screen  and (max-width: $screen-767) and  (orientation : landscape)
+            @content
+    @else if $media == screen-860
+        @media (max-width: $screen-860)
+            @content
+    @else if $media == screen-991
+        @media (max-width: $screen-991)
+            @content
+    @else if $media == screen-992
+        @media (min-width: $screen-992)
+            @content
+    @else if $media == screen-1024
+        @media (max-width: $screen-1024)
+            @content
+    @else if $media == screen-1140
+        @media (max-width: $screen-1140)
+            @content
+    @else if $media == screen-1230
+        @media (max-width: $screen-1230)
+            @content
+    @else if $media == screen-1300
+        @media (max-width: $screen-1300)
+            @content
+    @else if $media == screen-1366
+        @media (max-width: $screen-1366)
+            @content
+    @else if $media == screen-1440
+        @media (max-width: $screen-1440)
+            @content
+    @else if $media == screen-1367
+        @media (min-width: $screen-1367)
+            @content
+
+
+=keyframes($name)
+  @-webkit-keyframes #{$name}
+    @content
+  @-moz-keyframes #{$name}
+    @content
+  @-ms-keyframes #{$name}
+    @content
+  @keyframes #{$name}
+    @content
+
+
+//color  
+$Blue_benz: #0e96e3
+$Blue_benz-sec: #18a9dc
+$Primary: #7D7056
+$Second: #f2f2f2
+$Blue: #083c5e
+$White: #fff
+$Black: #000
+$Black_fade: #2b2b2b
+$text: #666666
+$Sky: #4aa8fa
+$Nocolor: #ffffff00
+
+    
+
+$normal: normal
+$FontL: 700
+$FontB: bold
+

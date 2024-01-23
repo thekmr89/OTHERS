@@ -1,0 +1,590 @@
+*,
+*::before,
+*::after
+    padding: 0
+    margin: 0
+    list-style: none
+    box-sizing: border-box
+
+body,html
+    font-size: 16px
+    font-weight: 500
+    line-height: 24px
+    color: $Black
+    font-family: 'Montserrat', sans-serif
+    @include respond-to(screen-675)
+        font-size: 15px
+    &::-webkit-scrollbar
+        width: 3px
+        background: $White
+    &::-webkit-scrollbar-track
+        box-shadow: none
+    &::-webkit-scrollbar-thumb
+        // background-color: $Blue
+        outline: 0
+    &.overfloy-y-hidden
+        overflow-y: hidden
+a[href]
+    text-decoration: none
+    transition: .5s ease
+    cursor: pointer
+img
+    max-width: 100%
+    display: block
+    transition: .5s ease
+.container
+    max-width: 1180px
+    width: 100%
+    margin: 0 auto
+    @include respond-to(screen-1300)
+        padding: 0 45px
+    @include respond-to(screen-1230)
+        max-width: 100%
+        padding: 0 68px
+    @include respond-to(screen-1024)
+        padding: 0 60px
+    @include respond-to(screen-767)
+        padding: 0 30px
+    @include respond-to(screen-675)
+        padding: 0 15px
+    &.container2
+        @include respond-to(screen-675)
+            padding-right: 0
+.container-fluid
+    padding: 0 25px
+    display: block
+    margin: 0 auto
+    @include respond-to(screen-991)
+        padding: 0 15px
+h1,h2,h3,h4
+    color: $Black
+    font-weight: $normal
+    em
+        font-style: normal
+p
+    font-size: 16px
+    font-weight: 500
+    color: $text
+    line-height: 24px
+    font-family: 'Montserrat', sans-serif
+    @include respond-to(screen-1024)
+        font-size: 16px
+        line-height: 24px
+    @include respond-to(screen-675)
+        font-size: 15px
+        line-height: 20px
+
+h1
+    font-size: 75px
+    line-height: 80px
+    @include respond-to(screen-1300)
+        font-size: 46px
+        line-height: 50px
+    @include respond-to(screen-1140)
+        font-size: 38px
+        line-height: 42px
+    @include respond-to(screen-1024)
+        font-size: 38px
+        line-height: 42px
+    @include respond-to(screen-991)
+        font-size: 32px
+    @include respond-to(screen-767)
+        font-size: 48px
+        line-height: 50px
+    @include respond-to(screen-675)
+        font-size: 34px
+        line-height: 36px
+h2
+    font-size: 36px
+    line-height: 42px
+    margin-bottom: 5px
+    @include respond-to(screen-1300)
+        font-size: 46px
+    @include respond-to(screen-1140)
+        font-size: 38px
+        line-height: 40px
+    @include respond-to(screen-1024)
+        font-size: 36px
+        line-height: 40px
+    @include respond-to(screen-991)
+        font-size: 32px
+        line-height: 40px
+    @include respond-to(screen-767)
+        font-size: 24px
+        line-height: 30px
+h3
+    font-size: 35px
+    line-height: 38px
+    @include respond-to(screen-1300)
+        font-size: 30px
+        line-height: 33px
+    @include respond-to(screen-1140)
+        font-size: 26px
+        line-height: 29px
+    @include respond-to(screen-767)
+        font-size: 22px
+        line-height: 26px
+h4
+    font-size: 22px
+    line-height: 24px
+    @include respond-to(screen-767)
+        font-size: 20px
+h5
+    font-size: 20px
+    line-height: 1
+    @include respond-to(screen-1300)
+        font-size: 18px
+    @include respond-to(screen-767)
+        font-size: 16px
+h6
+    font-size: 18px
+    line-height: 24px
+    @include respond-to(screen-1024)
+        font-size: 16px
+        line-height: 20px
+.text-center
+    text-align: center
+.text-img-center
+    text-align: -webkit-center
+.grid
+    display: grid
+.inline-block
+    display: inline-block
+.flex
+    display: flex
+    flex-wrap: wrap
+.heading
+    h3
+        font-size: 50px
+        line-height: normal
+        @include respond-to(screen-1300)
+            font-size: 40px
+        @include respond-to(screen-1140)
+            font-size: 38px
+        @include respond-to(screen-991)
+            font-size: 34px
+        @include respond-to(screen-767)
+            font-size: 24px
+        .span1,.span2
+            font-size: 50px
+            line-height: 55px
+            @include respond-to(screen-1300)
+                font-size: 42px
+                line-height: 48px
+            @include respond-to(screen-1140)
+                font-size: 36px
+                line-height: 42px
+            @include respond-to(screen-767)
+                font-size: 30px
+                line-height: 34px
+        .span2
+            color: $Blue
+    &.size48
+        h3
+            font-size: 48px
+            line-height: 1
+    &.size36
+        h3
+            font-size: 36px
+            line-height: 1
+            @include respond-to(screen-767)
+                font-size: 24px
+                line-height: 26px
+.custom-scroll
+    &::-webkit-scrollbar
+        width: 3px
+        display: none
+    &::-webkit-scrollbar-track
+        box-shadow: none
+    &::-webkit-scrollbar-thumb
+        background-color: $Black
+        outline: 0
+input,button,select
+    font-size: 16px
+    line-height: 25px
+    color: $text
+
+.overlay
+    position: fixed
+    left: 0
+    top: 0
+    bottom: 0
+    right: 0
+    z-index: 99
+    background: $Black
+    opacity: 0
+    pointer-events: none
+    user-select: none
+    transition: .4s ease
+    @include respond-to(screen-991)
+        z-index: 9
+    &.overlay_active
+        pointer-events: all
+        opacity: .8
+        transition: .5s ease
+.video_icon
+    width: 45px
+    height: 45px
+    border: 2px solid $White
+    position: relative
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    border-radius: 100px
+    cursor: pointer
+    @include respond-to(screen-1024)
+        width: 38px
+        height: 38px
+    @include respond-to(screen-767)
+        border-width: 1px
+    &:before
+        width: 50px
+        height: 50px
+        top: 50%
+        right: 0
+        bottom: 0
+        left: 50%
+        position: absolute
+        content: ""
+        transform: translateX(-50%) translateY(-50%)
+        background: #ffffffd1
+        border-radius: 50%
+        display: block
+        animation: pulse-border 1500ms ease-out infinite
+        @include respond-to(screen-1024)
+            width: 33px
+            height: 33px
+    img
+        width: 10px
+        position: relative
+        margin-left: 3px
+
+@keyframes pulse-border
+    0%
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1)
+        opacity: 0.5
+    100%
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5)
+        opacity: 0
+
+.social-links
+    a
+        display: grid
+        place-items: center
+        width: 38px
+        height: 38px
+        padding: 6px
+        svg
+            width: 20px
+            height: 20px
+            margin: 0 auto
+            path
+                fill: $White
+                transition: .5s ease
+.model
+    .close
+        width: 35px
+        height: 35px
+        display: flex
+        align-items: center
+        justify-content: center
+        position: absolute
+        right: 15px
+        top: 10px
+        padding: 0
+        border-radius: 50px
+        background: transparent
+        cursor: pointer
+        transition: .5s ease
+        z-index: 999
+.ModelPop
+    position: fixed
+    top: 0
+    bottom: 0
+    right: 0
+    z-index: 3
+.close
+    position: absolute
+    right: 15px
+    top: 15px
+    cursor: pointer
+    display: flex
+    align-items: center
+    justify-content: center
+    svg
+        width: 26px
+        height: 26px
+.Model_Video
+    position: fixed
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    z-index: 188
+    background: #000
+    transform: translateY(100%)
+    transition: .5s ease
+    opacity: 0
+    &.is-open
+        transform: translateY(0%)
+        opacity: 1
+    .close_model
+        position: absolute
+        top: 10px
+        right: 20px
+        cursor: pointer
+    .modelBody
+        height: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        iframe
+            width: 90%
+            height: 85%
+            border: 0
+//tabs
+.tab-nav
+    ul
+        text-align: center
+        li
+            display: inline-block
+            cursor: pointer
+.tab-nav-content
+    position: relative
+    .tabs
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        opacity: 0
+        user-select: none
+        pointer-events: none
+        transition: 0s ease
+        .to-up
+            transition: 0s ease
+            transform: translateY(50px)
+        &.active
+            transition: .5s ease
+            position: unset
+            opacity: 1
+            visibility: visible
+            user-select: auto
+            pointer-events: all
+            .to-up
+                transition: .5s ease
+                transform: translateY(0px)
+//dropdown
+
+.has_dropdown
+    position: relative
+    a
+        display: inline-flex
+        align-items: center
+        gap: 8px
+    &::before
+        content: ""
+        position: absolute
+        top: 100%
+        left: 0
+        width: 0
+        height: 2px
+        z-index: 1
+        transition: .5s ease
+    &:hover
+        &::before
+            right: 0
+            width: 100%
+        .nav_dropdown
+            user-select: auto
+            height: auto
+            transform: translateY(0px)
+            user-select: auto
+            visibility: visible
+            overflow: hidden
+            opacity: 1
+            pointer-events: all
+            transition: .2s ease, height .6s ease
+    .nav_dropdown
+        background: $White
+        border-radius: 3px
+        width: 150px
+        height: 0
+        position: absolute
+        left: 0
+        top: 100%
+        transform: translateY(5px) scale(.99)
+        opacity: 0
+        visibility: hidden
+        overflow: hidden
+        pointer-events: none
+        user-select: none
+        transition: .1s ease
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px
+        ul
+            li
+                display: block
+                margin-left: 0
+                a
+                    color: $Black
+                    display: block
+                    padding: 6px 0 6px 20px
+                    &:hover
+                        background: $Blue
+                        color: $White
+//get_consult_btn
+
+.get_consult_btn
+    a
+        display: inline-block
+        color: $White
+        border-radius: 5px
+        padding: 4px 20px
+        @include respond-to(screen-767)
+            font-size: 14px
+            padding: 2px 15px
+        &:hover
+            background: $Blue
+
+//
+
+.has_flt_ttl
+    position: relative
+    &::before,&::after
+        position: absolute
+        content: ''
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        user-select: none
+        pointer-events: none
+    &::after
+        content: none
+    .btm_inf_flt
+        position: absolute
+        bottom: 0
+        left: 0
+        right: 0
+        z-index: 1
+    .link_jtp
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        z-index: 2
+//rotate animation
+
+.rotate
+    animation: rotate 10s linear infinite
+    @keyframes rotate
+        0%
+            transform: rotate(0deg)
+        100%
+            transform: rotate(360deg)
+    &.anti-clock
+        animation: rotate-anti-clock 10s linear infinite
+        @keyframes rotate-anti-clock
+            0%
+                transform: rotate(0deg)
+            100%
+                transform: rotate(-360deg)
+//hover-hang
+
+.hvr-bob
+    transform: perspective(1px) translateZ(0)
+    &:hover
+        animation-name: hvr-bob-float, hvr-bob
+        animation-duration: .3s, 1.5s
+        animation-delay: 0s, .3s
+        animation-timing-function: ease-out, ease-in-out
+        animation-fill-mode: forwards
+        animation-direction: normal, alternate
+        animation-iteration-count: 1, infinite
+        filter: drop-shadow(rgba(149, 157, 165, 0.2) 0px 8px 24px)
+    @keyframes hvr-bob
+        0%
+            transform: translateY(-12px)
+
+        50%
+            transform: translateY(-8px)
+
+        100%
+            transform: translateY(-12px)
+    @keyframes hvr-bob-float
+        100%
+            transform: translateY(-12px)
+.btn_home
+    a
+        color: $White
+        background: $Blue
+        padding: 6px 20px
+        border-radius: 5px
+
+.btn
+    &:hover
+        transition: .5s ease
+        color: $Blue_benz !important
+.text-left
+    text-align: left !important
+
+.bannerBN
+    .titleHead
+        font-size: 48px
+        line-height: 52px
+        @include respond-to(screen-767)
+            font-size: 34px
+            line-height: 36px
+        @include respond-to(screen-675)
+            font-size: 26px
+            line-height: 28px
+
+
+select
+    -webkit-appearance: none
+    -moz-appearance: none
+    text-indent: 1px
+    text-overflow: ''        
+.link_btn
+    a
+        display: inline-block
+        padding: 8px 0px
+        border-bottom: 1px solid $White
+        span,img
+            display: inline-block
+            vertical-align: middle
+            color: $White
+            font-size: 14px
+        img
+            margin-left: 10px
+        &:hover
+            img
+                margin-left: 18px            
+.owl-carousel
+    .owl-stage
+        display: flex
+        .owl-item
+            flex: 1 0 auto
+            .item
+                height: 100%
+                .card
+                    height: 100%
+
+.mobile-slider
+    .owl-nav
+        button.owl-prev,.owl-next
+            position: absolute
+            top: 50%
+            translate: 0 -50%
+            pointer-events: all
+            user-select: auto
+            &.disabled
+                opacity: 0
+                pointer-events: none
+                user-select: none
+        .owl-prev
+            left: 10px
+        .owl-next
+            right: 10px
