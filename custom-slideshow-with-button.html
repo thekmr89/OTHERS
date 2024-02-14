@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Object View</title>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            .bannerDots {
+                position: absolute;
+                bottom: 90px;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 2;
+            }
+            .bannerDots .owl-dot {
+                width: 16px;
+                height: 16px;
+                border-radius: 20px;
+                margin: 0 3px;
+                border: 2px solid transparent;
+                background: transparent;
+                position: relative;
+                transition: 0.5s ease;
+                cursor: pointer;
+            }
+            .bannerDots .owl-dot::before {
+                content: "";
+                width: 6px;
+                height: 6px;
+                top: 3px;
+                left: 3px;
+                position: absolute;
+                background: #fff;
+                border-radius: 20px;
+                opacity: 1;
+                transition: 0.5s ease;
+            }
+            .bannerDots .owl-dot.active {
+                border-color: #fff;
+            }
+            .bannerDots .owl-dot.active::before {
+                opacity: 0;
+            }
+
+            .banner-slider {
+                position: relative;
+            }
+            .banner-slider .item {
+                overflow: hidden;
+                height: 100vh;
+            }
+            .banner-slider .item img {
+                height: 100%;
+                width: 100%;
+                -o-object-fit: cover;
+                object-fit: cover;
+            }
+            .banner-slider .item.active {
+                position: relative;
+                z-index: 1;
+            }
+            .banner-slider .item.active img {
+                transition: transform 5s ease, opacity 1.5s ease;
+            }
+            .banner-slider .item:not(.active) {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                pointer-events: none;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                user-select: none;
+                z-index: 0;
+            }
+            .banner-slider .item:not(.active) img {
+                transition: 0s ease;
+                opacity: 0;
+                transform: scale(1.3);
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <div class="banner-slider">
+                <div class="item">
+                    <img src="https://www.graaswarehousing.com/GraasWarehousingImages/BannerImages/banner-1-banner.jpg" alt="Banner 1" />
+                </div>
+
+                <div class="item">
+                    <img src="https://www.graaswarehousing.com/GraasWarehousingImages/BannerImages/banner-2-banner.jpg" alt="Banner 2" />
+                </div>
+
+                <div class="item">
+                    <img src="https://www.graaswarehousing.com/GraasWarehousingImages/BannerImages/banner-3.jpg" alt="Banner 3" />
+                </div>
+            </div>
+            <div class="bannerDots"></div>
+        </main>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                var boxes = $(".banner-slider .item");
+                var intervalTime = 6000;
+                var currentIndex = 0;
+
+                function setActive(index) {
+                    boxes.removeClass("active");
+                    $(".bannerDots .owl-dot").removeClass("active");
+                    $(boxes[index]).addClass("active");
+                    $(".bannerDots .owl-dot").eq(index).addClass("active");
+                    currentIndex = index;
+                }
+
+                function createButtons() {
+                    for (var i = 0; i < boxes.length; i++) {
+                        var dot = $('<button type="button" class="owl-dot"></button>');
+                        dot.data("index", i);
+                        $(".bannerDots").append(dot);
+                    }
+                }
+                createButtons();
+
+                // Initial state
+                setActive(currentIndex);
+
+                // Interval function
+                var interval = setInterval(function () {
+                    currentIndex = (currentIndex + 1) % boxes.length;
+                    setActive(currentIndex);
+                }, intervalTime);
+
+                // Button click event
+                $(".bannerDots .owl-dot").on("click", function () {
+                    clearInterval(interval);
+                    var index = $(this).data("index");
+                    setActive(index);
+                    interval = setInterval(function () {
+                        currentIndex = (currentIndex + 1) % boxes.length;
+                        setActive(currentIndex);
+                    }, intervalTime);
+                });
+            });
+        </script>
+    </body>
+</html>
