@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+	p{
+	font-size: 16px;
+	line-height: 24px;
+	margin: 0;
+	}
+  </style>
+</head>
+<body>
+	<small>Not Count Space</p>
+  <p data-limit="33" data-white-space="false">There are Multiple Characters in this Line.</p>
+  <small>Count Space</p>
+  <p data-limit="33" data-white-space="true">There are Multiple Characters in this Line.</p>
+  <script type="text/javascript">
+    $(function(){
+      $("[data-limit]").each(function(){
+		var text = $(this).text().replace(/\s+/g, ' ');
+		var nospace = $(this).text().replace(/\s+/g, '');
+        var limit = parseInt($(this).data('limit'));
+		var iswhitespace = $(this).attr('data-white-space');
+		var totalwhitespace = 0;
+		for (var i = 0; i < limit; i++) {
+			if (text[i].match(/\s/)) {
+				totalwhitespace++;
+			}
+		}
+		console.log(text.length)
+		if(iswhitespace === 'false'){
+			if(nospace.length > limit){
+				$(this).text(text.substr(0, limit + totalwhitespace) + '...');
+			}
+		} else {
+			if(text.length > limit){
+				$(this).text(text.substr(0, limit) + '...');
+			}
+		}
+      });
+    });
+  </script>
+</body>
+</html>
