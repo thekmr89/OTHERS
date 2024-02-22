@@ -7,12 +7,12 @@ https://georgebrata.ro/alege-un-website/
 
 # Websites Designs
 
-https://www.silvercore.ca/
-https://spaceinterface.com/
-https://www.superbolter.com/
-https://havenly.com/
-https://masonstudio.com/
-https://www.snaptrude.com/
+https://www.silvercore.ca/<br>
+https://spaceinterface.com/<br>
+https://www.superbolter.com/<br>
+https://havenly.com/<br>
+https://masonstudio.com/<br>
+https://www.snaptrude.com/<br>
 
 # Cool Website Templates
 
