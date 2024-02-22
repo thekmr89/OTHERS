@@ -26,3 +26,18 @@ https://www.snaptrude.com/<br>
 <b>Images</b>
 
 1. https://www.silvercore.ca/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbg-light-texture.6e09151e.png&w=3840&q=75
+
+# animations
+
+https://tympanus.net/Development/OpeningSequence/<br>
+https://tympanus.net/Development/ThumbnailGridAnimations/index2.html<br>
+https://tympanus.net/Tutorials/AnimatedBorderMenus/index.html<br>
+https://tympanus.net/Development/SidebarTransitions/<br>
+https://tympanus.net/Tutorials/3DShadingWithBoxShadows/<br>
+https://tympanus.net/Development/CreativeLinkEffects/#cl-effect-1<br>
+https://tympanus.net/Development/AnimatedBooks/index2.html<br>
+
+# Canvas Examples
+
+https://tympanus.net/Tutorials/GooeyImageHoverEffects/<br>
+https://tympanus.net/Tutorials/AnimatedOpeningType/<br>
