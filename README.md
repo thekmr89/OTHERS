@@ -2,13 +2,17 @@
 
 1. https://codepen.io/snorkltv/pen/YzvjGom
 
-# Admin Designs
+# Admin Design
+https://georgebrata.ro/alege-un-website/
 
-1. https://georgebrata.ro/alege-un-website/
+#Interior Design Websites
 
-https://spaceinterface.com/
-https://www.superbolter.com/
-https://havenly.com/
-https://masonstudio.com/
+1. https://spaceinterface.com/
+2. https://www.superbolter.com/
+3. https://havenly.com/
+4. https://masonstudio.com/
+5. https://www.snaptrude.com/
 
-https://www.snaptrude.com/
+#Cool Website Templates
+
+1.https://prismic.io/showcase
