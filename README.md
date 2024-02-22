@@ -5,13 +5,14 @@
 # Admin Design
 https://georgebrata.ro/alege-un-website/
 
-# Interior Design Websites
+# Websites Designs
 
-1. https://spaceinterface.com/
-2. https://www.superbolter.com/
-3. https://havenly.com/
-4. https://masonstudio.com/
-5. https://www.snaptrude.com/
+https://www.silvercore.ca/
+https://spaceinterface.com/
+https://www.superbolter.com/
+https://havenly.com/
+https://masonstudio.com/
+https://www.snaptrude.com/
 
 # Cool Website Templates
 
