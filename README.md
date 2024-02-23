@@ -1,7 +1,3 @@
-# GSAP Examples
-
-1. https://codepen.io/snorkltv/pen/YzvjGom
-
 # Admin Design
 https://georgebrata.ro/alege-un-website/
 
