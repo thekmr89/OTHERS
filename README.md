@@ -37,3 +37,8 @@ https://tympanus.net/Development/AnimatedBooks/index2.html<br>
 
 https://tympanus.net/Tutorials/GooeyImageHoverEffects/<br>
 https://tympanus.net/Tutorials/AnimatedOpeningType/<br>
+
+#Add React Project to Github
+
+1. Create a repository and push code
+2. after Code is puplished the npm run deploy
