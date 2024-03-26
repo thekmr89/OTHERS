@@ -18,6 +18,7 @@ https://www.snaptrude.com/<br>
 
 <b>Video</b>
   1. https://assets-global.website-files.com/64ad6f1aef87635bd23449f1/64bafc5cda4a8e76db1b9469_video-tube-v3-transcode.mp4
+  2. https://d3dhhnglzn5zko.cloudfront.net/cana_beyond.mp4
 
 <b>Images</b>
 
