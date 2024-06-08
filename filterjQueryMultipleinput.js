@@ -30,3 +30,8 @@ $(document).ready(function () {
         $('[name="propertyLocation"]').change(filterItems);
         $('[name="propertyTitle"]').keyup(filterItems);
     });
+
+
+<div class="item project-col" data-tab="tab_1" data-title="Title1" data-location="location_1"></div>
+<div class="item project-col" data-tab="tab_2" data-title="Title2" data-location="location_2"></div>
+<div class="item project-col" data-tab="tab_3" data-title="Title3" data-location="location_3"></div>
