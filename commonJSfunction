@@ -1,0 +1,20 @@
+#Add class active on intervel
+
+function slideShow(selector, interval) {
+    $(selector).each(function() {
+        let $parent = $(this);
+        let $children = $parent.children();
+        let totalChildren = $children.length;
+        let currentIndex = 0;
+
+        $children.eq(currentIndex).addClass('active');
+
+        setInterval(function() {
+            $children.eq(currentIndex).removeClass('active');
+            currentIndex = (currentIndex + 1) % totalChildren;
+            $children.eq(currentIndex).addClass('active');
+        }, interval);
+    });
+}
+
+slideShow('.ico-img', 3000);
