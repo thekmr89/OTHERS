@@ -18,3 +18,62 @@ function slideShow(selector, interval) {
 }
 
 slideShow('.ico-img', 3000);
+
+
+#check input is checked and add class to other element
+
+function isinputcheck(selectors) {
+    function updateDisableState(inputSelector, targetClass) {
+        const isChecked = $(inputSelector).is(':checked');
+        $(targetClass).toggleClass('disabled-btn', !isChecked);
+    }
+
+    selectors.forEach(({ inputSelector, targetClass }) => {
+        updateDisableState(inputSelector, targetClass);
+
+        $(inputSelector).on('change', () => updateDisableState(inputSelector, targetClass));
+    });
+
+    $('body').on('click', '.disabled-btn', function (e) {
+        e.preventDefault();
+        const messageText = $(this).data('message');
+        const messagePosition = $(this).data('position');
+        message(messageText, messagePosition);
+    });
+}
+
+#filter swiper slides
+
+function filterswiper(swiperSelector, slidetab) {
+    const sliderElement = document.querySelector(swiperSelector);
+    if (sliderElement && sliderElement.swiper) {
+        const sliderInstance = sliderElement.swiper;
+        function filterSlides(slideType) {
+            sliderInstance.slides.forEach(slide => {
+                const $slide = $(slide);
+                $slide.toggle($slide.attr('data-slide') === slideType || !slideType);
+            });
+            sliderInstance.update();
+        }
+        $(slidetab).on('change', 'input', function () {
+            const slideType = $(this).val();
+            filterSlides(slideType);
+        });
+        const initialSlideType = $(slidetab).find('input:checked').val();
+        filterSlides(initialSlideType);
+    }
+}
+
+#chnage whatsapp url
+
+function adjustWhatsAppUrls() {
+    var screenWidth = $(window).width();
+
+    if (screenWidth > 991) {
+        $('a[href^="https://api.whatsapp.com/"]').each(function() {
+            var currentHref = $(this).attr('href');
+            var newHref = currentHref.replace('https://api.whatsapp.com/', 'https://web.whatsapp.com/');
+            $(this).attr('href', newHref);
+        });
+    }
+}
