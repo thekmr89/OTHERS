@@ -9,6 +9,7 @@ https://www.superbolter.com/<br>
 https://havenly.com/<br>
 https://masonstudio.com/<br>
 https://www.snaptrude.com/<br>
+https://www.manprax.com/
 
 # Cool Website Templates
 
